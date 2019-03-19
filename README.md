@@ -18,7 +18,6 @@ workflow "Parse version from package.json" {
 
 action "jq-parse-version" {
   uses = "floriandorau/jq-action@master"
-  secrets = ["GITHUB_TOKEN"]
   env = [
       JQ_FILE = "package.json"
       JQ_FILTERS = ".version"
@@ -44,4 +43,4 @@ You can use the following env variables to control _jq_.
 | ------------- | ---------------------------------------
 | `JQ_FILE`     | File to parse with _jq_
 | `JQ_OPTIONS`  | List of options passed to _jq_. See [jq manual](https://stedolan.github.io/jq/manual/#Invokingjq) to find valid option.
-| `JQ_FILTERS`  | List of filters passed to _jq_. See [jq manual](https://stedolan.github.io/jq/manual/#Basicfilters) for possible filers.
+| `JQ_FILTERS`  | List of filters passed to _jq_. See [jq basic filters](https://stedolan.github.io/jq/manual/#Basicfilters) for possible filers.
