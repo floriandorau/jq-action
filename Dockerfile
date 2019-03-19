@@ -10,7 +10,6 @@ LABEL "maintainer"="Florian Dorau <fdorau@it-economics.de>"
 
 RUN apk add jq
 
-COPY test.json /test.json
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
