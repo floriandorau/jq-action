@@ -18,14 +18,7 @@ workflow "Parse version from package.json" {
 
 action "jq-parse-version" {
   uses = "floriandorau/jq-action@master"
-<<<<<<< HEAD
-  env = [
-      JQ_FILE = "package.json"
-      JQ_FILTERS = ".version"
-  ]
-=======
   args = ["-r", ".version", "package.json"]
->>>>>>> 8319e4a... Update README.md
 }
 ```
 
