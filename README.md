@@ -18,7 +18,7 @@ workflow "Parse version from package.json" {
 
 action "jq-parse-version" {
   uses = "floriandorau/jq-action@master"
-  args = ["-r", ".version", "package.json"]
+  args = [".version", "package.json"]
 }
 ```
 
