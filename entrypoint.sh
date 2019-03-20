@@ -1,4 +1,5 @@
 #!/bin/sh
+env 
 
 result=$(sh -c "jq $*")
 
