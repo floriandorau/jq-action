@@ -10,7 +10,7 @@ jq is a lightweight and flexible command-line JSON processor.
 
 Register the _jq-action_ in your `.github/main.workflow` according to the following.
 
-```
+```bash
 workflow "Parse version from package.json" {
   on = "commit"
   resolves = ["jq-parse"]
@@ -18,10 +18,14 @@ workflow "Parse version from package.json" {
 
 action "jq-parse-version" {
   uses = "floriandorau/jq-action@master"
+<<<<<<< HEAD
   env = [
       JQ_FILE = "package.json"
       JQ_FILTERS = ".version"
   ]
+=======
+  args = ["-r", ".version", "package.json"]
+>>>>>>> 8319e4a... Update README.md
 }
 ```
 
